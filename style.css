@@ -49,6 +49,8 @@ body {
     background: var(--bg-primary);
     min-height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transition: background 0.3s ease;
 }
@@ -164,7 +166,8 @@ body {
 
 /* Content */
 .content {
-    padding: 0 0 80px;
+    padding-bottom: 0; /* Remove bottom padding to eliminate the gap */
+    flex-grow: 1; /* Allow content to grow and push the footer down */
     background: var(--bg-secondary);
     transition: background 0.3s ease;
 }
@@ -287,12 +290,8 @@ body {
 
 /* Bottom Navigation */
 .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
-    max-width: 375px;
+    /* position: fixed is removed to place the nav at the end of the content flow. */
     background: var(--bg-primary);
     border-top: 1px solid var(--border-color);
     padding: 8px 0 20px;
@@ -415,7 +414,7 @@ button,
 /* Toast Notification */
 .toast {
     position: fixed;
-    bottom: 80px; /* Above nav bar */
+    bottom: 20px; /* Adjusted position after making nav bar non-fixed */
     left: 50%;
     transform: translate(-50%, 20px);
     background-color: rgba(44, 44, 46, 0.85); /* iOS-like toast */
