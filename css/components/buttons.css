@@ -1,0 +1,18 @@
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #D1EFF8;
+  color: #11BAFB;
+}
+
+.icon-btn.ghost {
+  background: #D1EFF8;
+  color: #11BAFB;
+}
+
+.icon-btn.small {
+  width: 30px;
+  height: 30px;
+}
