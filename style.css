@@ -1,32 +1,32 @@
 :root {
     /* Light Mode Colors */
     --bg-primary: #ffffff;
-    --bg-secondary: #f5f5f5;
-    --bg-tertiary: #fafafa;
+    --bg-secondary: #f8f8f8;
+    --bg-tertiary: #f2f2f7;
     --text-primary: #000000;
     --text-secondary: #666666;
     --text-tertiary: #999999;
-    --border-color: #e0e0e0;
+    --border-color: #e5e5ea;
     --border-light: #f0f0f0;
     --accent-blue: #11BAFB;
-    --accent-blue-light: #e3f2fd;
-    --icon-bg: #e0e0e0;
+    --accent-blue-light: #d1eff8;
+    --icon-bg: #f0f0f0;
     --status-bar-text: #000000;
 }
 
 [data-theme="dark"] {
     /* Dark Mode Colors */
     --bg-primary: #000000;
-    --bg-secondary: #1c1c1e;
-    --bg-tertiary: #2c2c2e;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #1c1c1e;
     --text-primary: #ffffff;
-    --text-secondary: #98989d;
+    --text-secondary: #a0a0a5;
     --text-tertiary: #636366;
-    --border-color: #38383a;
-    --border-light: #2c2c2e;
+    --border-color: #2c2c2e;
+    --border-light: #1c1c1e;
     --accent-blue: #11BAFB;
-    --accent-blue-light: rgba(10, 132, 255, 0.15);
-    --icon-bg: #3a3a3c;
+    --accent-blue-light: rgba(17, 186, 251, 0.15);
+    --icon-bg: #2c2c2e;
     --status-bar-text: #ffffff;
 }
 
@@ -108,13 +108,13 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 18px;
-    background: #D1EFF8;
+    background: var(--accent-blue-light);
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #11BAFB;
+    color: var(--accent-blue);
     font-size: 18px;
     transition: all 0.2s ease;
 }
@@ -129,8 +129,8 @@ body {
 }
 
 .icon-btn.more {
-    background: #D1EFF8;
-    color: #11BAFB;
+    background: var(--accent-blue-light);
+    color: var(--accent-blue);
 }
 
 /* Toggle Switch */
@@ -166,19 +166,24 @@ body {
 
 /* Content */
 .content {
-    padding-bottom: 0; /* Remove bottom padding to eliminate the gap */
-    flex-grow: 1; /* Allow content to grow and push the footer down */
+    padding: 16px 20px;
+    padding-bottom: 16px;
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
     background: var(--bg-secondary);
     transition: background 0.3s ease;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Day Section */
 .day-section {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     background: var(--bg-primary);
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     transition: background 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .day-header {
@@ -188,6 +193,7 @@ body {
     padding: 16px 20px;
     background: var(--bg-tertiary);
     transition: background 0.3s ease;
+    border-bottom: 1px solid var(--border-light);
 }
 
 .day-title {
@@ -358,8 +364,8 @@ button,
     width: 220px;
     background: var(--bg-tertiary);
     border-radius: 12px;
-    padding: 6px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--border-color);
     visibility: hidden;
     opacity: 0;
